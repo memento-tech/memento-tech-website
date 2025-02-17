@@ -20,16 +20,16 @@ const NavBar = () => {
     <>
       <NavBarHolder />
       <NavBarContainer scrolled={scrolled}>
-        <Link to={"/memento-tech-website"}>
+        <Link to={"/"}>
           <NavBarLogo src={mTechLogo} />
         </Link>
         <LinksContainer>
-          <NavBarLink to={"/memento-tech-website"}>Home</NavBarLink>
-          <NavBarLink to={"/memento-tech-website/projects"}>
+          <NavBarLink to={"/"}>Home</NavBarLink>
+          <NavBarLink to={"/projects"}>
             Projects
           </NavBarLink>
-          <NavBarLink to={"/memento-tech-website/blog"}>Blog</NavBarLink>
-          <NavBarLink to={"/memento-tech-website/contact-us"}>
+          <NavBarLink to={"/blog"}>Blog</NavBarLink>
+          <NavBarLink to={"/contact-us"}>
             Contact Us
           </NavBarLink>
         </LinksContainer>

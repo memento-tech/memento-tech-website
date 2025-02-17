@@ -10,7 +10,7 @@ const Footer = () => {
     <FooterContainer>
       <FooterContent>
         <RightSectionFooter>
-          <LinkStyled to={"/memento-tech-website"}>
+          <LinkStyled to={"/"}>
             <FooterLogo src={mTechLogo} />
             <LogoTextContainer>
               <h1>Memento Tech</h1>

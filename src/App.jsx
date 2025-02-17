@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 import "./App.css";
 import LandingPage from "./pages/LandingPage";
 import FullContainer from "./components/FullContainer";
@@ -8,13 +8,13 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <FullContainer>
-      <BrowserRouter>
+      <HashRouter>
         <NavBar />
         <Routes>
-          <Route path="/memento-tech-website" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </FullContainer>
   );
 }
