@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/memento-tech-website" element={<LandingPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
