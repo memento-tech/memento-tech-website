@@ -15,7 +15,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "REACT_APP_RECAPTCHA_API_KEY=$REACT_APP_RECAPTCHA_API_KEY npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
