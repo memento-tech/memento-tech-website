@@ -12,14 +12,14 @@ const PageSection = ({
     width: srcWidth,
   };
   return (
-    <SectionContainer>
+    <SectionContainer $leftSide={leftOrient}>
       {leftOrient ? (
         <SectionText>{text}</SectionText>
       ) : (
-        <img src={visualSrc} style={srcStyle} />
+        <img src={visualSrc} style={srcStyle} alt="missing" />
       )}
       {leftOrient ? (
-        <img src={visualSrc} style={srcStyle} />
+        <img src={visualSrc} style={srcStyle} alt="missing" />
       ) : (
         <SectionText>{text}</SectionText>
       )}
@@ -37,6 +37,16 @@ const SectionContainer = styled.div`
   align-items: end;
   padding: 1rem 0;
 
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: ${({ $leftSide }) =>
+      $leftSide ? "column-reverse" : "column"};
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 0;
+  }
+
   margin-bottom: 2rem;
 `;
 
@@ -44,7 +54,20 @@ const SectionText = styled.p`
   margin: 0;
   text-align: center;
 
-  background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.8) 40%);
+  background: linear-gradient(
+    transparent 0%,
+    rgba(0, 0, 0, 0.8) 50%,
+    transparent 100%
+  );
+
+  @media screen and (max-width: 600px) {
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.705) 0%,
+      rgba(0, 0, 0, 0.705) 50%,
+      rgba(20, 150, 11, 0) 60%
+    );
+  }
 
   padding: 1rem;
 `;

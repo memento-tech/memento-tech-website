@@ -100,6 +100,10 @@ const TypingText = styled.div`
   align-items: center;
 
   box-shadow: 0 -20px -20px rgba(0, 0, 0, 0.7);
+
+  @media screen and (max-width: 600px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const VerticalLine = styled.p`
@@ -118,6 +122,10 @@ const PageContainer = styled.div`
   padding: 0 10%;
   box-sizing: border-box;
   scroll-behavior: smooth; /* Smooth scrolling for entire page */
+
+  @media screen and (max-width: 600px) {
+    padding: 0 5%;
+  }
 `;
 
 const MovingLogo = styled.img`
@@ -125,6 +133,11 @@ const MovingLogo = styled.img`
   width: 100px;
   height: 100px;
   animation: moveLogo 3s ease-in-out infinite;
+
+  @media screen and (max-width: 600px) {
+    width: 80px;
+    height: 80px;
+  }
 
   @keyframes moveLogo {
     0% {

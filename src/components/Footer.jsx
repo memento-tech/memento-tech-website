@@ -59,10 +59,16 @@ const FooterContent = styled.div`
   justify-content: center;
   align-items: center;
   width: 80%;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const Copyright = styled.div`
   font-size: 12px;
+  margin-bottom: 0.5rem;
 `;
 
 const SocialMediaLinks = styled.div`
@@ -84,6 +90,11 @@ const RightSectionFooter = styled.div`
   justify-content: center;
   align-items: center;
   width: 50%;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 `;
 
 const LeftSectionFooter = styled.div`
@@ -92,6 +103,10 @@ const LeftSectionFooter = styled.div`
   justify-content: center;
   align-items: center;
   width: 50%;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const LinkStyled = styled(Link)`
