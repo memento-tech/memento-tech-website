@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "./static/css/main.129c415c.css",
-    "main.js": "./static/js/main.276d760f.js",
+    "main.js": "./static/js/main.b47c9b33.js",
     "static/media/section2Gif.gif": "./static/media/section2Gif.d092f35586b8fa962497.gif",
+    "static/media/section1Gif.png": "./static/media/section1Gif.24c138b95b4255e5f16e.png",
     "static/media/section4Gif.gif": "./static/media/section4Gif.646f15083f4b973a1bbd.gif",
     "static/media/section3Gif.gif": "./static/media/section3Gif.3fb26d9b3c3c823ae786.gif",
     "static/media/m-tech-logo-white-empty.png": "./static/media/m-tech-logo-white-empty.ec8f4a351f61254dc8f9.png",
-    "static/media/section1Gif.png": "./static/media/section1Gif.b99ad4514a1f1b51da87.png",
     "index.html": "./index.html",
     "main.129c415c.css.map": "./static/css/main.129c415c.css.map",
-    "main.276d760f.js.map": "./static/js/main.276d760f.js.map"
+    "main.b47c9b33.js.map": "./static/js/main.b47c9b33.js.map"
   },
   "entrypoints": [
     "static/css/main.129c415c.css",
-    "static/js/main.276d760f.js"
+    "static/js/main.b47c9b33.js"
   ]
 }
