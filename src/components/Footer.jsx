@@ -21,9 +21,21 @@ const Footer = () => {
         <LeftSectionFooter>
           Find us here!
           <SocialMediaLinks>
-            <SocialMediaLink src={linkedInLogo} />
-            <SocialMediaLink src={githubLogo} />
-            <SocialMediaLink src={instagramLogo} />
+            <a
+              href="https://www.linkedin.com/in/igor--stojanovic"
+              target="_blank"
+            >
+              <SocialMediaLink src={linkedInLogo} />
+            </a>
+            <a href="https://github.com/memento-tech" target="_blank">
+              <SocialMediaLink src={githubLogo} />
+            </a>
+            <a
+              href="https://www.instagram.com/igor____stojanovic/"
+              target="_blank"
+            >
+              <SocialMediaLink src={instagramLogo} />
+            </a>
           </SocialMediaLinks>
         </LeftSectionFooter>
       </FooterContent>

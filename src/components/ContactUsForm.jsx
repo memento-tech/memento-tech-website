@@ -1,11 +1,9 @@
 import { useForm } from "@formspree/react";
 import { useEffect, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import styled from "styled-components";
 
 const ContactUsForm = () => {
   const [state, handleSubmit, reset] = useForm("meoevqvq");
-  const [recaptchaValidated, setRecaptchaValidated] = useState(false);
   const [submitSuccessfull, setSubmitSuccessfull] = useState(false);
 
   const [name, setName] = useState("");
@@ -16,7 +14,6 @@ const ContactUsForm = () => {
     if (state.succeeded) {
       setSubmitSuccessfull(true);
       reset();
-      setRecaptchaValidated(false);
 
       setName("");
       setEmail("");
@@ -25,7 +22,7 @@ const ContactUsForm = () => {
   }, [state.succeeded, reset]);
 
   const validateForm = () => {
-    return recaptchaValidated && name && email && message;
+    return name && email && message;
   };
 
   return (
@@ -68,16 +65,6 @@ const ContactUsForm = () => {
           required
           value={message}
           onChange={(event) => setMessage(event.target.value)}
-        />
-
-        <ReCAPTCHA
-          sitekey={"6LdfZCcqAAAAAOmKlN4FR9vATnPE_DdwdfE3Xxbu"}
-          theme="dark"
-          onChange={(token) => {
-            if (token.length > 0) {
-              setRecaptchaValidated(true);
-            }
-          }}
         />
 
         <SubmitButton

@@ -45,10 +45,10 @@ const NavBar = () => {
             Projects
           </NavBarLink>
           <NavBarLink
-            to={"/blog"}
+            to={"/tech-hub"}
             onClick={() => setMenuIconClicked(!menuIconClicked)}
           >
-            Blog
+            Tech Hub
           </NavBarLink>
           <NavBarLink
             to={"/contact-us"}
@@ -61,7 +61,7 @@ const NavBar = () => {
         <LinksContainer>
           <NavBarLink to={"/"}>Home</NavBarLink>
           <NavBarLink to={"/projects"}>Projects</NavBarLink>
-          <NavBarLink to={"/blog"}>Blog</NavBarLink>
+          <NavBarLink to={"/tech-hub"}>Tech Hub</NavBarLink>
           <NavBarLink to={"/contact-us"}>Contact Us</NavBarLink>
         </LinksContainer>
       </NavBarContainer>
