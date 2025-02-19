@@ -87,7 +87,6 @@ const ContactUsForm = () => {
           Send
         </SubmitButton>
       </FormStyled>
-
       <SuccessMessage>
         {submitSuccessfull &&
           "Thank you for contacting us! We will responde as soon as possible!"}
