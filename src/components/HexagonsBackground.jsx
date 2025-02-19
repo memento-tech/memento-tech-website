@@ -91,7 +91,7 @@ const HexagonsBackground = () => {
         width: "100%",
         height: "100%",
         zIndex: -1,
-        backgroundColor: "black",
+        backgroundColor: "#121212",
       }}
     />
   );

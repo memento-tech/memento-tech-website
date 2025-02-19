@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <>
       <NavBarHolder />
-      <NavBarContainer scrolled={scrolled.toString()}>
+      <NavBarContainer $scrolled={scrolled.toString()}>
         <Link to={"/"}>
           <NavBarLogo src={mTechLogo} />
         </Link>
@@ -82,18 +82,19 @@ const NavBarContainer = styled.div`
   width: 100%;
   height: 4rem;
 
-  background: ${({ scrolled }) =>
-    scrolled
+  background: ${({ $scrolled }) =>
+    $scrolled === "true"
       ? "linear-gradient(90deg, rgba(47,69,129,1) 0%, rgba(36,91,150,1) 45%, rgba(109,158,218,1) 100%)"
       : "#0d11170"};
-  border-bottom: ${({ scrolled }) => (scrolled ? "none" : "2px solid #ffffff")};
+  border-bottom: ${({ $scrolled }) =>
+    $scrolled === "true" ? "none" : "2px solid #ffffff"};
 
   display: flex;
   align-items: center;
 
   box-sizing: border-box;
   padding: 0 0.5rem;
-  padding-bottom: ${({ scrolled }) => (scrolled ? "2px" : "0")};
+  padding-bottom: ${({ $scrolled }) => ($scrolled === "true" ? "2px" : "0")};
 
   z-index: 1000;
 `;
