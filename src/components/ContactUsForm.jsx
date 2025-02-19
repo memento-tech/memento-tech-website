@@ -71,7 +71,7 @@ const ContactUsForm = () => {
         />
 
         <ReCAPTCHA
-          sitekey={process.env.REACT_APP_RECAPTCHA_API_KEY}
+          sitekey={"6LdfZCcqAAAAAOmKlN4FR9vATnPE_DdwdfE3Xxbu"}
           theme="dark"
           onChange={(token) => {
             if (token.length > 0) {
