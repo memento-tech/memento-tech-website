@@ -24,19 +24,35 @@ const MainTitle = styled.h1`
 
   margin-bottom: 1rem;
   font-size: 2.5rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 
 const FirstSubtitle = styled.h2`
   font-size: 1.5rem;
   margin-top: 1.8rem;
   border-bottom: 1px solid #e1e1e1;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const SecondSubtitle = styled.h3`
   font-size: 1.5rem;
   margin-top: 1rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const OtherSubtitle = styled.h4`
   font-size: 1.2rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;

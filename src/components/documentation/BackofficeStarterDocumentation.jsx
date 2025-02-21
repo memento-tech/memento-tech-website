@@ -1644,6 +1644,18 @@ const Container = styled.div`
   flex-direction: column;
 
   font-size: 14px;
+
+  @media screen and (max-width: 600px) {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  ul {
+    @media screen and (max-width: 600px) {
+      padding: 1rem;
+    }
+  }
+
   li {
     padding-top: 10px;
     b {
@@ -1658,6 +1670,11 @@ const Container = styled.div`
     width: calc(100% - 20px);
     border: 1px solid white;
     border-collapse: collapse;
+
+    @media screen and (max-width: 600px) {
+      max-width: 100vw;
+      overflow-x: scroll;
+    }
 
     td,
     th {

@@ -36,6 +36,11 @@ const DocumentationPage = () => {
             smooth={true}
             spy={true}
             containerId="documentContainer"
+            onClick={() => {
+              if (window.innerWidth < 600) {
+                setSideBarVisible(false);
+              }
+            }}
           >
             {indexPrefix}
             {currentIndex}. {link.title}
@@ -93,11 +98,23 @@ const PageContainer = styled.div`
 `;
 
 const MainContainer = styled.div`
+  position: relative;
   display: flex;
   height: calc(100vh - 4rem);
 
+  @media screen and (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
+
   .visible {
     width: 40%;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+    }
   }
 `;
 
@@ -108,6 +125,12 @@ const Sidebar = styled.div`
   color: white;
   padding: 20px;
   overflow-y: auto;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    padding: 25px;
+  }
 `;
 
 const SideBarTop = styled.div`
@@ -120,6 +143,10 @@ const SideBarCloseIconContainer = styled.div`
   top: 10px;
   right: 10px;
   cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+    rotate: -90deg;
+  }
 `;
 
 const ProjectName = styled.h1`
@@ -162,4 +189,10 @@ const Content = styled.div`
 
   text-align: justify;
   text-justify: inter-word;
+
+  @media screen and (max-width: 600px) {
+    text-align: start;
+    height: calc(100% -30px);
+    padding: 10px;
+  }
 `;
