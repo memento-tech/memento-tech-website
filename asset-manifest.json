@@ -1,18 +1,27 @@
 {
   "files": {
     "main.css": "/memento-tech-website/static/css/main.638048f9.css",
-    "main.js": "/memento-tech-website/static/js/main.21d014bf.js",
+    "main.js": "/memento-tech-website/static/js/main.9c1aff68.js",
     "static/media/section2Gif.gif": "/memento-tech-website/static/media/section2Gif.d092f35586b8fa962497.gif",
     "static/media/section1Gif.png": "/memento-tech-website/static/media/section1Gif.24c138b95b4255e5f16e.png",
+    "static/media/mediaCreationPopup.png": "/memento-tech-website/static/media/mediaCreationPopup.39b4aa2036836e22a02c.png",
+    "static/media/data-management-populated.png": "/memento-tech-website/static/media/data-management-populated.f794ec8b0a84ecb036ae.png",
     "static/media/section4Gif.gif": "/memento-tech-website/static/media/section4Gif.646f15083f4b973a1bbd.gif",
     "static/media/section3Gif.gif": "/memento-tech-website/static/media/section3Gif.3fb26d9b3c3c823ae786.gif",
+    "static/media/backoffice-console-start.png": "/memento-tech-website/static/media/backoffice-console-start.1c50d1f315b59fcd47fc.png",
+    "static/media/backoffice-starter-login-page.png": "/memento-tech-website/static/media/backoffice-starter-login-page.f57ca04b9d061ce830b2.png",
+    "static/media/entityCreationPopup.png": "/memento-tech-website/static/media/entityCreationPopup.a59351b225a9bed690d3.png",
+    "static/media/data-management-empty.png": "/memento-tech-website/static/media/data-management-empty.91a80d3a336c36200d38.png",
+    "static/media/translationCreationPopup.png": "/memento-tech-website/static/media/translationCreationPopup.aaa63464694aa77e1629.png",
+    "static/media/navigation-after-refresh.png": "/memento-tech-website/static/media/navigation-after-refresh.d6eff5e57a35ab6e8956.png",
+    "static/media/navigation-before-refresh.png": "/memento-tech-website/static/media/navigation-before-refresh.5e3e51a4adf658032e2a.png",
     "static/media/m-tech-logo-white-empty.png": "/memento-tech-website/static/media/m-tech-logo-white-empty.ec8f4a351f61254dc8f9.png",
     "index.html": "/memento-tech-website/index.html",
     "main.638048f9.css.map": "/memento-tech-website/static/css/main.638048f9.css.map",
-    "main.21d014bf.js.map": "/memento-tech-website/static/js/main.21d014bf.js.map"
+    "main.9c1aff68.js.map": "/memento-tech-website/static/js/main.9c1aff68.js.map"
   },
   "entrypoints": [
     "static/css/main.638048f9.css",
-    "static/js/main.21d014bf.js"
+    "static/js/main.9c1aff68.js"
   ]
 }
