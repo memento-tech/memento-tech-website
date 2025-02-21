@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ContactUsPage from "./pages/ContactUsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import TechHubPage from "./pages/TechHubPage";
+import DocumentationPage from "./pages/DocumentationPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/contact-us" element={<ContactUsPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/tech-hub" element={<TechHubPage />} />
+          <Route path="/documentation" element={<DocumentationPage />} />
         </Routes>
         <Footer />
       </HashRouter>

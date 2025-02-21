@@ -24,15 +24,21 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/in/igor--stojanovic"
               target="_blank"
+              rel="noreferrer"
             >
               <SocialMediaLink src={linkedInLogo} />
             </a>
-            <a href="https://github.com/memento-tech" target="_blank">
+            <a
+              href="https://github.com/memento-tech"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SocialMediaLink src={githubLogo} />
             </a>
             <a
               href="https://www.instagram.com/igor____stojanovic/"
               target="_blank"
+              rel="noreferrer"
             >
               <SocialMediaLink src={instagramLogo} />
             </a>
