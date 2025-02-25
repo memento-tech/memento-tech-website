@@ -20,7 +20,6 @@ const NavBar = () => {
 
   return (
     <>
-      <NavBarHolder />
       <NavBarContainer $scrolled={scrolled.toString()}>
         <Link to={"/"}>
           <NavBarLogo src={mTechLogo} />
@@ -70,11 +69,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-const NavBarHolder = styled.div`
-  width: 100%;
-  height: 4rem;
-`;
 
 const NavBarContainer = styled.div`
   position: fixed;

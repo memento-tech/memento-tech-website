@@ -1,28 +1,19 @@
 import { Link } from "react-router";
 import styled from "styled-components";
 import BackofficeIcon from "../components/icons/BackofficeIcon";
-
-const projects = [
-  {
-    title: "Backoffice",
-    text: "Efficiently manage and oversee platform operations with a secure and intuitive back-office system.",
-    link: "/documentation?project=backoffice",
-    icon: <BackofficeIcon />,
-  },
-];
+import projectsData from "../data/projectsData";
 
 const ProjectsPage = () => {
   return (
     <PageContainer>
       <ProjectLinksContainer>
-        {projects &&
-          projects.map((project) => (
-            <ProjectLink to={project.link}>
-              {project.icon}
-              <ProjectTitle>{project.title}</ProjectTitle>
-              <ProjectText>{project.text}</ProjectText>
-            </ProjectLink>
-          ))}
+        {projectsData.map((project) => (
+          <ProjectLink to={project.link}>
+            {project.icon}
+            <ProjectTitle>{project.shortName}</ProjectTitle>
+            <ProjectText>{project.description}</ProjectText>
+          </ProjectLink>
+        ))}
       </ProjectLinksContainer>
     </PageContainer>
   );
