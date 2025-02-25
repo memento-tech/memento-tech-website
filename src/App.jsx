@@ -8,11 +8,13 @@ import ContactUsPage from "./pages/ContactUsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import TechHubPage from "./pages/TechHubPage";
 import DocumentationPage from "./pages/DocumentationPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <FullContainer>
       <HashRouter>
+        <ScrollToTop />
         <NavBar />
         <Routes>
           <Route path="/" element={<LandingPage />} />

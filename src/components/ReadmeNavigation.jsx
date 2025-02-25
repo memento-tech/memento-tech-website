@@ -67,8 +67,18 @@ const Sidebar = styled.div`
   box-sizing: border-box;
 
   @media screen and (max-width: 600px) {
+    position: absolute;
+    bottom: 0;
+
+    height: 3rem;
     width: 100%;
-    padding: 25px;
+
+    background: linear-gradient(
+      90deg,
+      rgba(47, 69, 129, 0.7665266790309874) 0%,
+      rgba(36, 91, 150, 0.9710084717480743) 45%,
+      rgba(109, 158, 218, 0.906582701439951) 100%
+    );
   }
 `;
 

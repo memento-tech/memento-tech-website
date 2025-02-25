@@ -69,18 +69,13 @@ const MainContainer = styled.div`
   display: flex;
   height: calc(100vh - 4rem);
 
-  @media screen and (max-width: 600px) {
-    flex-direction: column-reverse;
-  }
-
   .visible {
     width: 40%;
 
     @media screen and (max-width: 600px) {
       width: 100%;
-      height: 100%;
-
-      position: absolute;
+      min-height: 100%;
+      background: #2c3e50;
     }
   }
 `;
