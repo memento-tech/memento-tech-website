@@ -69,8 +69,13 @@ const MainContainer = styled.div`
   display: flex;
   height: calc(100vh - 4rem);
 
+  @media screen and (max-width: 600px) {
+    height: calc(100vh - 6rem);
+  }
+
   .visible {
     width: 40%;
+    height: calc(100vh - 6rem);
 
     @media screen and (max-width: 600px) {
       width: 100%;
