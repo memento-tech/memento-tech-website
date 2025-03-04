@@ -1,5 +1,4 @@
 import { HashRouter, Route, Routes } from "react-router";
-import "./App.css";
 import LandingPage from "./pages/LandingPage";
 import FullContainer from "./components/FullContainer";
 import NavBar from "./components/NavBar";
@@ -9,6 +8,8 @@ import ProjectsPage from "./pages/ProjectsPage";
 import TechHubPage from "./pages/TechHubPage";
 import DocumentationPage from "./pages/DocumentationPage";
 import ScrollToTop from "./components/ScrollToTop";
+import projectsData from "./data/projectsData";
+import techBlogs from "./data/techBlogs";
 
 function App() {
   return (
@@ -17,11 +18,32 @@ function App() {
         <ScrollToTop />
         <NavBar />
         <Routes>
+          <Route
+            path="/about.md"
+            element={<a href="/about.md">View Markdown</a>}
+          />
           <Route path="/" element={<LandingPage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/tech-hub" element={<TechHubPage />} />
-          <Route path="/documentation" element={<DocumentationPage />} />
+          <Route
+            path="/projects/documentation"
+            element={
+              <DocumentationPage
+                isProjects={true}
+                documentations={projectsData}
+              />
+            }
+          />
+          <Route
+            path="/tech-hub/documentation"
+            element={
+              <DocumentationPage
+                isProjects={false}
+                documentations={techBlogs}
+              />
+            }
+          />
         </Routes>
         <Footer />
       </HashRouter>

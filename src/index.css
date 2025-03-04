@@ -11,6 +11,8 @@ body {
   color: #ffffff;
   height: 100vh;
   text-align: center;
+
+  font-size: 90%;
 }
 
 #root {

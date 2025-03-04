@@ -37,10 +37,10 @@ const HexagonsBackground = () => {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 1; // Slower velocity
+        this.vx = (Math.random() - 0.5) * 1;
         this.vy = (Math.random() - 0.5) * 1;
-        this.radius = Math.random() * 25 + 1; // Random size between 1px and 30px
-        this.opacity = Math.random() * 0.6; // Random opacity between 0 and 1
+        this.radius = Math.random() * 25 + 1;
+        this.opacity = Math.random() * 0.6;
       }
 
       update() {

@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import styled from "styled-components";
-import BackofficeIcon from "../components/icons/BackofficeIcon";
 import projectsData from "../data/projectsData";
 
 const ProjectsPage = () => {
@@ -64,15 +63,9 @@ const ProjectLink = styled(Link)`
 `;
 
 const ProjectTitle = styled.h2`
-  font-size: 1.2rem;
-  @media screen and (max-width: 600px) {
-    font-size: 1.2rem;
-  }
+  font-size: 1.2em;
 `;
 
 const ProjectText = styled.p`
-  font-size: 1rem;
-  @media screen and (max-width: 600px) {
-    font-size: 1rem;
-  }
+  font-size: 1em;
 `;

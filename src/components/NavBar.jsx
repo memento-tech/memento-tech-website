@@ -119,7 +119,6 @@ const LinksContainer = styled.div`
 const NavBarLink = styled(Link)`
   color: white;
   padding: 0 1rem;
-  font-size: 16px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out, 0.2s ease-in-out;
   text-decoration: none;

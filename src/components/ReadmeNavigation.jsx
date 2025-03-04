@@ -25,7 +25,7 @@ const ReadmeNavigation = ({ projectId = null, navigationLinks }) => {
               }
             }}
           >
-            {link.title}
+            {link.navPrefix} <NavTitle>{link.title}</NavTitle>
           </StyledLink>
           {link.subtitles && getNavigationLinks(link.subtitles)}
         </div>
@@ -37,6 +37,7 @@ const ReadmeNavigation = ({ projectId = null, navigationLinks }) => {
     <Sidebar className={sideBarVisible && "visible"}>
       <SideBarCloseIconContainer>
         <DoubleArrowIcon
+          height="20"
           rotate={sideBarVisible ? "0deg" : "180deg"}
           onClick={() => setSideBarVisible(!sideBarVisible)}
         />
@@ -61,7 +62,6 @@ const Sidebar = styled.div`
   position: relative;
   width: 20px;
   background: #2c3e50;
-  color: white;
   padding: 20px;
   overflow-y: auto;
   box-sizing: border-box;
@@ -99,10 +99,12 @@ const SideBarCloseIconContainer = styled.div`
 `;
 
 const ProjectName = styled.h1`
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 400;
 
   text-transform: capitalize;
+
+  margin-top: 0;
 `;
 
 const NavLinks = styled.div`
@@ -111,20 +113,26 @@ const NavLinks = styled.div`
 
   align-items: start;
 
+  color: #d9d9d9;
+  font-weight: 100;
+
+  overflow: hidden;
+
   a:hover {
-    font-size: 1.1rem;
+    color: white;
+    font-weight: 800;
   }
 `;
 
 const StyledLink = styled(Link)`
-  color: white;
   text-decoration: none;
-  padding: 10px 0;
-  font-size: 14px;
+  padding: 0;
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
   text-align: start;
+
+  display: flex;
 
   padding-left: ${(props) =>
     "calc(10px * " +
@@ -133,4 +141,14 @@ const StyledLink = styled(Link)`
     ")"};
 
   cursor: pointer;
+`;
+
+const NavTitle = styled.p`
+  margin: 0;
+  margin-left: 5px;
+
+  white-space: break-spaces;
+  box-sizing: border-box;
+
+  padding-right: 5px;
 `;

@@ -104,14 +104,12 @@ const LabelStyled = styled.label`
   width: 100%;
   text-align: start;
   margin-top: 2rem;
-  font-size: 15px;
   font-style: italic;
 `;
 
 const InputStyled = styled.input`
   width: 100%;
   color: white;
-  font-size: 16px;
   border: none;
   border-bottom: 2px solid white;
   outline: none;
@@ -127,7 +125,6 @@ const InputStyled = styled.input`
 const TextAreaStyled = styled.textarea`
   width: 100%;
   color: white;
-  font-size: 16px;
   border: none;
   border-bottom: 2px solid white;
   outline: none;
@@ -148,7 +145,6 @@ const SubmitButton = styled.button`
   background-color: ${({ disabled }) =>
     disabled ? "#555555ad" : "rgba(36, 91, 150, 0.97)"};
   color: white;
-  font-size: 16px;
   border: none;
   border-radius: 4px;
   width: 8rem;

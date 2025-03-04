@@ -2,18 +2,20 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router";
 import styled from "styled-components";
 import ReadmeViewer from "../components/ReadmeViewer";
-import projectsData from "../data/projectsData";
 import LoadingSpinner from "../components/LoadingSpinner";
+import DoubleArrowIcon from "../components/icons/DoubleArrowIcon";
 
-const DocumentationPage = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+const DocumentationPage = ({ isProjects, documentations }) => {
+  const [searchParams] = useSearchParams();
   const [projectData, setProjectData] = useState(null);
 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    var foundData = projectsData.filter((data) =>
-      data.link.endsWith("project=" + searchParams.get("project"))
+    setProjectData(null);
+
+    var foundData = documentations.filter(
+      (data) => data.id === searchParams.get("project")
     )[0];
 
     if (foundData) {
@@ -23,7 +25,7 @@ const DocumentationPage = () => {
     }
 
     setTimeout(() => setLoading(false), 1000);
-  }, [searchParams]);
+  }, [searchParams, documentations]);
 
   if (loading) {
     return (
@@ -32,27 +34,64 @@ const DocumentationPage = () => {
       </PageContainer>
     );
   }
-  if (!projectData) {
-    return (
-      <PageContainer>
-        <NotFoundProjectContainer>
-          <p>Project documentation not found</p>
-          <Link to={"/projects"}>Back to projects</Link>
-        </NotFoundProjectContainer>
-      </PageContainer>
-    );
-  }
 
   return (
     <PageContainer>
-      <MainContainer>
-        <ReadmeViewer projectData={projectData} />
-      </MainContainer>
+      <BackLink to={isProjects ? "/projects" : "/tech-hub"}>
+        <DoubleArrowIcon height="20" />{" "}
+        <span>Back to {!isProjects && "Tech Hub"} projects</span>
+      </BackLink>
+      {!projectData && (
+        <NotFoundProjectContainer>
+          <p>
+            <strong>{projectData?.shortName}</strong>{" "}
+            {!isProjects ? "Tech Hub" : projectData ? "project" : "Project"}{" "}
+            documentation not found.
+          </p>
+        </NotFoundProjectContainer>
+      )}
+
+      {projectData && projectData.notFinished && (
+        <NotFoundProjectContainer>
+          <span>
+            <strong>{projectData.shortName}</strong> {!isProjects && "Tech Hub"}{" "}
+            documentation is not yet finished. Please be patient :)
+          </span>
+        </NotFoundProjectContainer>
+      )}
+
+      {projectData && !projectData.notFinished && (
+        <MainContainer>
+          <ReadmeViewer readmeData={projectData} />
+        </MainContainer>
+      )}
     </PageContainer>
   );
 };
 
 export default DocumentationPage;
+
+const BackLink = styled(Link)`
+  color: white;
+  vertical-align: middle;
+
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+
+  margin-left: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+
+  span {
+    margin-left: 0.5rem;
+  }
+`;
 
 const PageContainer = styled.div`
   flex-grow: 1;
@@ -62,6 +101,10 @@ const PageContainer = styled.div`
   background-color: #13131397;
 
   position: relative;
+
+  pre {
+    background: rgb(39, 40, 34);
+  }
 `;
 
 const MainContainer = styled.div`
@@ -92,7 +135,8 @@ const NotFoundProjectContainer = styled.div`
   align-items: center;
   height: 100%;
 
-  a {
-    color: white;
+  strong {
+    text-decoration: underline;
+    font-style: italic;
   }
 `;

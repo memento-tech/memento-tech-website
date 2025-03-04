@@ -17,11 +17,11 @@ const TechHubPage = () => {
 
       <BlogLinksContainer>
         {techBlogs.map((blog, index) => (
-          <BlogLink key={index} to={blog.url}>
+          <BlogLink key={index} to={blog.link}>
             {blog.icon}
             <BlogTextContainer>
-              <BlogTitle>{blog.title}</BlogTitle>
-              <BlogText>{blog.text}</BlogText>
+              <BlogTitle>{blog.shortName}</BlogTitle>
+              <BlogText>{blog.description}</BlogText>
             </BlogTextContainer>
           </BlogLink>
         ))}
@@ -41,14 +41,14 @@ const PageContainer = styled.div`
 `;
 
 const PageIntro = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.2eem;
   font-weight: 200;
   max-width: 80%;
   text-align: center;
   margin-top: 2rem;
 
   @media screen and (max-width: 600px) {
-    font-size: 1rem;
+    font-size: 1em;
   }
 `;
 
@@ -104,20 +104,20 @@ const BlogTextContainer = styled.div`
 `;
 
 const BlogTitle = styled.h2`
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: 200;
   margin: 0;
 
   @media screen and (max-width: 600px) {
-    font-size: 1rem;
+    font-size: 1em;
   }
 `;
 
 const BlogText = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-style: italic;
 
   @media screen and (max-width: 600px) {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 `;
