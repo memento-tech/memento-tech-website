@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/memento-tech-website/static/css/main.eb6da802.css",
-    "main.js": "/memento-tech-website/static/js/main.7a9d9239.js",
+    "main.css": "/memento-tech-website/static/css/main.1afd7e10.css",
+    "main.js": "/memento-tech-website/static/js/main.1abb497a.js",
     "static/media/section2Gif.gif": "/memento-tech-website/static/media/section2Gif.d092f35586b8fa962497.gif",
     "static/media/section1Gif.png": "/memento-tech-website/static/media/section1Gif.24c138b95b4255e5f16e.png",
     "static/media/section4Gif.gif": "/memento-tech-website/static/media/section4Gif.646f15083f4b973a1bbd.gif",
     "static/media/section3Gif.gif": "/memento-tech-website/static/media/section3Gif.3fb26d9b3c3c823ae786.gif",
     "static/media/m-tech-logo-white-empty.png": "/memento-tech-website/static/media/m-tech-logo-white-empty.ec8f4a351f61254dc8f9.png",
     "index.html": "/memento-tech-website/index.html",
-    "main.eb6da802.css.map": "/memento-tech-website/static/css/main.eb6da802.css.map",
-    "main.7a9d9239.js.map": "/memento-tech-website/static/js/main.7a9d9239.js.map"
+    "main.1afd7e10.css.map": "/memento-tech-website/static/css/main.1afd7e10.css.map",
+    "main.1abb497a.js.map": "/memento-tech-website/static/js/main.1abb497a.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb6da802.css",
-    "static/js/main.7a9d9239.js"
+    "static/css/main.1afd7e10.css",
+    "static/js/main.1abb497a.js"
   ]
 }
