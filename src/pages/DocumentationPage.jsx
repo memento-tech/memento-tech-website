@@ -80,9 +80,10 @@ const BackLink = styled(Link)`
   justify-content: center;
   align-self: flex-start;
 
+  margin-top: 0.5rem;
   margin-left: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+
+  height: 2rem;
 
   @media screen and (max-width: 600px) {
     display: none;
@@ -110,7 +111,7 @@ const PageContainer = styled.div`
 const MainContainer = styled.div`
   position: relative;
   display: flex;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 4rem - 2rem);
 
   @media screen and (max-width: 600px) {
     height: calc(100vh - 6rem);

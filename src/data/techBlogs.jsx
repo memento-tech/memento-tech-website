@@ -19,9 +19,9 @@ const techBlogs = [
   },
   {
     id: "styled-components",
-    notFinished: true,
-    gitUrl: null,
-    readmeUrl: null,
+    gitUrl: "https://github.com/memento-tech/styled-components-tech-hub/",
+    readmeUrl:
+      "https://raw.githubusercontent.com/memento-tech/styled-components-tech-hub/main/README.md",
     shortName: "Styled components with React JS",
     description:
       "Learn how to style your React applications efficiently using Styled Components. Includes dynamic theming and best practices.",
