@@ -1,4 +1,5 @@
 import CookieIcon from "../components/icons/CookieIcon";
+import GambleIcon from "../components/icons/GambleIcon";
 import ReactIcon from "../components/icons/ReactIcon";
 import RockIcon from "../components/icons/RockIcon";
 import SpringBootStarterIcon from "../components/icons/SpringBootStarterIcon";
@@ -27,6 +28,17 @@ const techBlogs = [
       "Learn how to style your React applications efficiently using Styled Components. Includes dynamic theming and best practices.",
     link: "documentation?project=styled-components",
     icon: <StyledComponentIcon />,
+  },
+  {
+    id: "stretch-game",
+    gitUrl: "https://github.com/memento-tech/styled-components-tech-hub/",
+    readmeUrl:
+      "https://raw.githubusercontent.com/memento-tech/stretch-game/main/README.md",
+    shortName: "Technical assignemnt - Stretch Game",
+    description:
+      "Java-based scratch game where users place bets, generate symbol matrices, and win rewards based on predefined combinations and bonus multipliers.",
+    link: "documentation?project=stretch-game",
+    icon: <GambleIcon />,
   },
   {
     id: "solid-principles",
