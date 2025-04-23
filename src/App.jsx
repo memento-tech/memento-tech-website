@@ -10,6 +10,7 @@ import DocumentationPage from "./pages/DocumentationPage";
 import ScrollToTop from "./components/ScrollToTop";
 import projectsData from "./data/projectsData";
 import techBlogs from "./data/techBlogs";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
               />
             }
           />
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
         <Footer />
       </HashRouter>
