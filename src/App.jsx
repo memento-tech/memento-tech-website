@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router";
 import LandingPage from "./pages/LandingPage";
 import FullContainer from "./components/FullContainer";
 import NavBar from "./components/NavBar";
@@ -15,7 +15,7 @@ import ErrorPage from "./pages/ErrorPage";
 function App() {
   return (
     <FullContainer>
-      <HashRouter>
+      <BrowserRouter>
         <ScrollToTop />
         <NavBar />
         <Routes>
@@ -48,7 +48,7 @@ function App() {
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </FullContainer>
   );
 }

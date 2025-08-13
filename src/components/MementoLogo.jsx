@@ -3,38 +3,37 @@ import styled, { keyframes } from "styled-components";
 import mTechLogo from "../assets/m-tech-logo-white-empty.png";
 
 const MementoLogo = () => {
-    const text = "Memento Tech_";
-    const [displayedText, setDisplayedText] = useState("");
-    const [index, setIndex] = useState(0);
+  const text = "Memento Tech_";
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
 
-    useEffect(() => {
-      if (index < text.length) {
-        const timeout = setTimeout(() => {
-          setDisplayedText((prev) => prev + text[index]);
-          setIndex(index + 1);
-        }, 150);
-        return () => clearTimeout(timeout);
-      } else {
-        setTimeout(() => {
-          setDisplayedText("");
-          setIndex(0);
-        }, 2000);
-      }
-    }, [index, text]);
+  useEffect(() => {
+    if (index < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + text[index]);
+        setIndex(index + 1);
+      }, 150);
+      return () => clearTimeout(timeout);
+    } else {
+      setTimeout(() => {
+        setDisplayedText("");
+        setIndex(0);
+      }, 2000);
+    }
+  }, [index, text]);
 
-    return (
-      <NameLogoContainer>
-        <TypingText>
-          {displayedText}
-          <VerticalLine>|</VerticalLine>
-        </TypingText>
-        <MovingLogo src={mTechLogo} />
-      </NameLogoContainer>
-    );
-}
+  return (
+    <NameLogoContainer>
+      <TypingText>
+        {displayedText}
+        <VerticalLine>|</VerticalLine>
+      </TypingText>
+      <MovingLogo src={mTechLogo} />
+    </NameLogoContainer>
+  );
+};
 
 export default MementoLogo;
-
 
 const Cursor = keyframes`
   50% { color: transparent; }
@@ -71,7 +70,6 @@ const VerticalLine = styled.p`
   animation: ${Cursor} 0.8s infinite;
   margin: 0;
 `;
-
 
 const MovingLogo = styled.img`
   margin-top: 3rem;
